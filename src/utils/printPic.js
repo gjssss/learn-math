@@ -26,7 +26,7 @@ function printPic(urls) {
         })
         iframe.contentWindow.addEventListener('afterprint', function () {
             // 通过父级页面删除 iframe 自己
-            document.removeChild(iframe)
+            iframe.parentNode.removeChild(iframe)
         })
     })
 }

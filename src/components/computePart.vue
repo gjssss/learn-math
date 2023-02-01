@@ -42,7 +42,7 @@ function handle() {
                 info[i] = c.str
                 if (isAnswer.value == true) {
                     let { ans } = c
-                    ansList[j * 90 + i] = ans
+                    ansList[j * 90 + i] = `${j * 90 + i}: ${ans}  `
                 }
             }
             urls[j] = await printGenerator('compute', info)

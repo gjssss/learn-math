@@ -1,3 +1,5 @@
-import { generate as computeGenerator } from "./generate";
+import { compareGenerator } from "./compareGenerate";
+import { computeGenerator } from "./computeGenerate";
 
-export { computeGenerator }
+
+export { computeGenerator,compareGenerator }

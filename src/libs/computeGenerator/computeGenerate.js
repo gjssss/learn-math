@@ -6,7 +6,7 @@ import { random } from "lodash-es";
  * @param {number} range 用于生成的范围
  * @return {object} 包括算式字符串以及答案
  */
-export function generate(modes, range) {
+export function computeGenerator(modes, range) {
     /**
      * mode         为式子随机选中的计算模式
      * signal       为式子的符号

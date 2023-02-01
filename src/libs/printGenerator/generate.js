@@ -1,5 +1,6 @@
 import Konva from "konva"
 import compute from "./compute"
+import compare from "./compare"
 /**
  * 生成算式图片
  * @param {String} mode 生成的图片模式: `compute` `compare`
@@ -28,6 +29,8 @@ export function generate(mode, info) {
         let textLayer
         if (mode == 'compute') {
             textLayer = compute(info)
+        } else if (mode == 'compare') {
+            textLayer = compare(info)
         }
         canvas.add(textLayer)
         resolve(canvas.toDataURL())
