@@ -12,6 +12,7 @@
     "ant-design-vue": "^3.2.15",
     "babel-plugin-import": "^1.13.6",
     "core-js": "^3.8.3",
+    "konva": "^8.4.2",
     "lodash-es": "^4.17.21",
     "vue": "^3.2.13",
     "vue-router": "^4.0.3"
