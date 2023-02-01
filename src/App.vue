@@ -3,12 +3,14 @@
     <h1>口算题卡生成器</h1>
     <ConfigProvider componentSize="large">
       <div class="btn-group">
-        <Button type="primary" @click="part = 'ComputePart'">计算题</Button>
-        <Button type="primary" @click="part = 'ComparePart'">比较题</Button>
+        <Button type="primary" @click="part = 'ComputePart'" :disabled="part == 'ComputePart'">计算题</Button>
+        <Button type="primary" @click="part = 'ComparePart'" :disabled="part == 'ComparePart'">比较题</Button>
       </div>
       <div class="option-container">
         <KeepAlive>
-          <component :is="parts[part]"></component>
+          <Transition name="fade" mode="out-in">
+            <component :is="parts[part]"></component>
+          </Transition>
         </KeepAlive>
       </div>
     </ConfigProvider>
@@ -52,5 +54,19 @@ const parts = {
   align-items: center;
   margin-top: 50px;
   width: 100%;
+}
+
+.fade-enter-active,
+.fade-leave-active {
+  transition: all 0.375s ease-in-out;
+}
+
+.fade-enter-from{
+  opacity: 0;
+  transform: translateX(-20px);
+}
+.fade-leave-to {
+  opacity: 0;
+  transform: translateX(20px);
 }
 </style>
